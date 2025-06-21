@@ -10,6 +10,12 @@ import ForgotPasswordScreen from "../screens/ForgotPasswordScreen";
 import ResetPasswordScreen from "../screens/ResetPasswordScreen";
 import ProfileScreen from '../screens/ProfileScreen';
 import { Ionicons } from '@expo/vector-icons';
+import MovieDetail from "../screens/MovieDetail";
+import BookingScreen from '../screens/BookingScreen.js';
+import FoodOrderScreen from '../screens/FoodOrderScreen';
+import PaymentScreen from '../screens/PaymentScreen';
+
+
 
 // 1. Tạo Bottom Tab Navigator (Thanh điều hướng dưới cùng)
 const Tab = createBottomTabNavigator();
@@ -36,8 +42,7 @@ function MainTabs() {
             {/* Các màn hình xuất hiện ở thanh tab */}
             <Tab.Screen name="Home" component={HomeScreen} options={{ title: 'Trang chủ' }} />
             <Tab.Screen name="Profile" component={ProfileScreen} options={{ title: 'Hồ sơ' }} />
-            <Tab.Screen name="Login" component={LoginScreen} options={{ title: 'Đăng nhập' }} />
-            <Tab.Screen name="ForgotPassword" component={ForgotPasswordScreen} options={{ title: 'Quên mật khẩu' }} />
+            
             {/* Thêm các tab khác nếu muốn */}
         </Tab.Navigator>
     );
@@ -61,6 +66,10 @@ const MainNavigator = () => {
             <Stack.Screen name='Register' component={RegisterScreen} />
             <Stack.Screen name='ResetPassword' component={ResetPasswordScreen} />
             <Stack.Screen name='ForgotPassword' component={ForgotPasswordScreen} />
+            <Stack.Screen name='MovieDetail' component={MovieDetail} />
+            <Stack.Screen name='BookingScreen' component={BookingScreen} options={{ title: 'Chọn ghế' }} />
+            <Stack.Screen name="FoodOrderScreen" component={FoodOrderScreen} options={{ title: 'Đặt đồ ăn uống' }} />
+            <Stack.Screen name="PaymentScreen" component={PaymentScreen} options={{ title: 'Thanh toán' }} />
         </Stack.Navigator>
     );
 };

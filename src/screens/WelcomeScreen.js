@@ -82,8 +82,8 @@ const WelcomeScreen = ({ navigation }) => {
                         useNativeDriver: true,
                     })
                 ]),
-                // Hiệu ứng delay để giữ logo và poster trong 3 giây
-                Animated.delay(3000),
+                // Hiệu ứng delay để giữ logo và poster trong 2 giây thôi Hiệp heo
+                Animated.delay(2000),
             ]).start(() => {
                 navigation.replace("Login"); // Điều hướng đến HomeScreen sau khi hoàn thành hiệu ứng
             });
